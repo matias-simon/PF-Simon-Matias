@@ -46,7 +46,6 @@ export function BuyOut() {
     </>
   ) : (
     <section className="form-container">
-      
       <div class="login-box">
         <h2>Finaliza tu Compra</h2>
         <form
@@ -55,7 +54,7 @@ export function BuyOut() {
           onSubmit={handleSubmit(buy)}
         >
           <div class="user-box">
-            <input type="text" name="" required="" {...register("name")}/>
+            <input type="text" name="" required="" {...register("name")} />
             <label>Tu Nombre</label>
           </div>
           <div class="user-box">
@@ -66,13 +65,17 @@ export function BuyOut() {
             <input type="email" name="" required="" {...register("email")} />
             <label>Tu E-mail</label>
           </div>
-          < button href= "#">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
+          <Button
+            type="submit"
+            variant="contained"
+            size="large"
+            sx={{
+              backgroundColor: "#333",
+              "&:hover": { backgroundColor: "#555" },
+            }}
+          >
             Completa Tu Compra
-          </button>
+          </Button>
         </form>
       </div>
       {/* <form>
