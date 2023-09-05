@@ -1,0 +1,21 @@
+.dt-container{
+    margin: 1rem 2rem 1rem 2rem;
+  }
+  .center {
+    text-align: center;
+    color: white;
+    border: 1px solid;
+    border-color: #222;
+    border-radius: 12px;
+    border-left-color: #222;
+    border-right-color: #222;
+    border-bottom-color: #222;
+  }
+  
+  
+  .dt-cell{
+    background: #222;
+    border: none;
+    color: white !important;
+    font-size: 16px;
+  }

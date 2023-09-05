@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 const CardItem = ({ img, tipo, marca, modelo, descripcion, precio, id }) => {
   return (
     <Card>
-      <CardMedia sx={{ height: 200 }} image={img} title={tipo} />
+      <CardMedia sx={{ height: 200}} component={"img"} image={img} title={tipo}  />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           {marca} {modelo}

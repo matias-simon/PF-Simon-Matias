@@ -22,9 +22,6 @@ const CartItem = ({
           <Typography gutterBottom variant="h5" component="div">
             {marca} {modelo}
           </Typography>
-          <Typography variant="body2" color="text.secondary">
-            {descripcion}
-          </Typography>
           <Typography variant="h5">$ {precio * cantidad}.00</Typography>
           <Typography>Cantidad :{cantidad}</Typography>
         </CardContent>

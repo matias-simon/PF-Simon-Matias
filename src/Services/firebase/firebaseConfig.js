@@ -5,12 +5,12 @@ import{getFirestore}from "firebase/firestore"
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAB2FMD0nKffkP0XNKLEh0O1W_5vMsUM7I",
-  authDomain: "simonguitars-d66eb.firebaseapp.com",
-  projectId: "simonguitars-d66eb",
-  storageBucket: "simonguitars-d66eb.appspot.com",
-  messagingSenderId: "841497757994",
-  appId: "1:841497757994:web:af75068dba33f720aef653"
+  apiKey: process.env.REACT_APP_apiKey,
+  authDomain: process.env.REACT_APP_authDomain,
+  projectId: process.env.REACT_APP_projectId,
+  storageBucket:process.env.REACT_APP_storageBucket ,
+  messagingSenderId: process.env.REACT_APP_messagingSenderId,
+  appId: process.env.REACT_APP_appId
 };
 
 
