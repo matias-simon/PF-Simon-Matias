@@ -1,4 +1,4 @@
-# Tienda en Línea de Guitarras de Simón
+# Tienda en Línea de Guitarras Simon's Guitars
 
 ## Descripción del Proyecto
 
