@@ -1,4 +1,4 @@
-import {React, useContext } from "react";
+import { React, useContext } from "react";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -11,8 +11,8 @@ import ItemCount from "../ItemCount/ItemCount";
 import { Link } from "react-router-dom";
 import { CartContext } from "../../Context/CartContext";
 
-const ItemDetail = ({item}) => {
-  const {addItem}= useContext(CartContext)
+const ItemDetail = ({ item }) => {
+  const { addItem } = useContext(CartContext);
   const [count, setCount] = useState(1);
 
   const handleDown = () => {
@@ -21,12 +21,11 @@ const ItemDetail = ({item}) => {
     }
   };
   const handleUp = () => {
-    setCount(count+ 1);
+    setCount(count + 1);
   };
-  const handleOnAdd = ()=>{
-    addItem(item, count)
-  }
-  
+  const handleOnAdd = () => {
+    addItem(item, count);
+  };
 
   return (
     <Container
@@ -34,7 +33,6 @@ const ItemDetail = ({item}) => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        minHeight: "100vh",
       }}
     >
       <Card
@@ -42,31 +40,39 @@ const ItemDetail = ({item}) => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          flexDirection: "column",
-          minWidth: 340,
+          // flexDirection: "column",
           padding: 3,
         }}
       >
+        <Box width={"50%"} display={"flex"} flexDirection={"column"} justifyContent={"center"}alignItems={"center"}>
         <CardMedia
           component="img"
-          sx={{ height: 200 }}
-          src= {item.img}
+          sx={{ height: 400, objectFit: "contain" }}
+          src={item.img}
           title={item.tipo}
         />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            {item.marca} {item.modelo}
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            {item.descripcion}
-          </Typography>
-          <Typography variant="h6">$ {item.precio}</Typography>
-        </CardContent>
-        <CardActions>
-        
-            <ItemCount count={count} handleDown={handleDown} handleUp={handleUp} handleOnAdd={handleOnAdd} />
-          
+         <CardActions>
+          <ItemCount
+            count={count}
+            handleDown={handleDown}
+            handleUp={handleUp}
+            handleOnAdd={handleOnAdd}
+          />
         </CardActions>
+        </Box>
+        <Box width={"50%"}>
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+              {item.marca} {item.modelo}
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              {item.descripcion}
+            </Typography>
+            <Typography textAlign={"center"} variant="h3" marginTop={6}>
+              $ {item.precio}
+            </Typography>
+          </CardContent>
+        </Box>
       </Card>
     </Container>
   );

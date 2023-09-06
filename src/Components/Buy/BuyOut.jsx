@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../../Services/firebase/firebaseConfig";
 import { BuyDetail } from "../BuyDetail/BuyDetail";
-import { Button } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 
 export function BuyOut() {
   const [orderId, setOrderId] = useState("");
@@ -36,12 +36,12 @@ export function BuyOut() {
 
   return orderId ? (
     <>
-      <div className="greetings-container">
-        <h2>Gracias Por tu Compra</h2>
-        <p>
+      <Box>
+        <Typography textAlign={'center'} variant="h1">Gracias Por tu Compra</Typography>
+        <Typography textAlign={'center'} variant="h4">
           El ID de tu Orden Es: <strong>{orderId}</strong>
-        </p>
-      </div>
+        </Typography>
+      </Box>
       <BuyDetail order={order} />
     </>
   ) : (
@@ -53,6 +53,8 @@ export function BuyOut() {
           className="form-buy-data"
           onSubmit={handleSubmit(buy)}
         >
+          <Box display={'flex'} flexDirection={'column'} alignItems={'center'} justifyContent={'center'}>
+          <Box>
           <div class="user-box">
             <input type="text" name="" required="" {...register("name")} />
             <label>Tu Nombre</label>
@@ -65,7 +67,9 @@ export function BuyOut() {
             <input type="email" name="" required="" {...register("email")} />
             <label>Tu E-mail</label>
           </div>
+          </Box>
           <Button
+            className="button"
             type="submit"
             variant="contained"
             size="large"
@@ -76,24 +80,9 @@ export function BuyOut() {
           >
             Completa Tu Compra
           </Button>
+          </Box>
         </form>
       </div>
-      {/* <form>
-        <input type="text" placeholder="Tu nombre"  />
-        <input type="number" placeholder="Tu Telefono"  />
-        <input type="email" placeholder="Tu Email" {...register("email")} />
-        <Button
-          variant="contained"
-          size="large"
-          sx={{
-            backgroundColor: "#333",
-            "&:hover": { backgroundColor: "#555" },
-          }}
-          type="submit"
-        >
-          Completa tu compra!
-        </Button>
-      </form> */}
     </section>
   );
 }

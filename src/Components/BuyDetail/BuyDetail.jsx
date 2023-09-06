@@ -7,7 +7,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { Link } from "react-router-dom";
-import { Button } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 
 export function BuyDetail({ order }) {
   const time =
@@ -19,9 +19,9 @@ export function BuyDetail({ order }) {
 
   return (
     <section className="dt-container">
-      <h4 className="center">Detalle de Compra</h4>
+      <Typography variant="h2" textAlign={"center"}>Detalle de Compra</Typography>
       <p>
-        {" "}
+
         {order.date.toLocaleDateString()} - {time}
       </p>
       <TableContainer component={Paper}>

@@ -1,6 +1,5 @@
 import { Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import "./ItemDetailContainer.css"; // Update your CSS file
 import ItemDetail from "../ItemDetail/ItemDetail";
 import Loading from "../Loading/Loading";
 import { useParams } from "react-router-dom";
@@ -33,7 +32,7 @@ const ItemDetailContainer = () => {
   return (
     <div className="fondo">
       <Typography variant="h2" sx={{ textAlign: "center", padding: "1rem" }}>
-        Item Detail
+        Detalle del Producto
       </Typography>
       <ItemDetail item={item} />
     </div>
