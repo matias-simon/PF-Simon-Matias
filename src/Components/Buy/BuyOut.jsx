@@ -60,7 +60,7 @@ export function BuyOut() {
             <label>Tu Nombre</label>
           </div>
           <div class="user-box">
-            <input type="phone" name="" required="" {...register("phone")} />
+            <input type="tel" name="" required="" {...register("phone")} />
             <label>Tu Telefono</label>
           </div>
           <div class="user-box">
