@@ -4,10 +4,6 @@
 
 La **Tienda en Línea de Guitarras de Simón** es una aplicación web de comercio electrónico que permite a los usuarios comprar guitarras y bajos en línea. Este proyecto está construido con **React** y utiliza **Firebase** para almacenar los datos.
 
-## Demostración en Vivo
-
-Puedes acceder a una **demostración en vivo** de la aplicación [aquí](#). ¡Explora nuestra selección de guitarras y bajos de alta calidad!
-
 ## Características Principales
 
 - **Exploración de Productos:** Los usuarios pueden explorar una amplia selección de guitarras y bajos de diferentes marcas y modelos.
